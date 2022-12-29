@@ -8,3 +8,4 @@ function coincidenciasArrays (arr1, arr2){
 }
 
 console.log(coincidenciasArrays([4,5,6,8,6,7,5,6.2], [4,5,6]))
+
