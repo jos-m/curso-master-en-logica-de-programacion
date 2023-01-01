@@ -16,4 +16,25 @@ function tipoAngulo(grados){
 }
 
 console.log(tipoAngulo(80))
-console.log(tipoAngulo(350))
+console.log(tipoAngulo(350));
+
+// Codigo del curso
+function angulo(abertura){
+  let resultado = 'Angulo Completo';
+
+  if(abertura < 90){
+    resultado = 'Angulo Agudo';
+  } else if(abertura === 90){
+    resultado = 'Angulo Recto';
+  } else if(abertura > 90 && abertura < 180){
+    resultado = 'Angulo Obtuso';
+  } else if(abertura === 180){
+    resultado = 'Angulo Llano';
+  } else if(abertura > 180 && abertura < 360){
+    resultado = 'Angulo Concavo';
+  }
+
+  return resultado;
+}
+
+console.log(angulo(361));
