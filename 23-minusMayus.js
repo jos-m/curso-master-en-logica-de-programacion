@@ -1,3 +1,4 @@
+// Cuenta mayusculas y minusculas.
 function mayusMinus(str){
 	
 	  let mayus =0;
@@ -17,3 +18,32 @@ function mayusMinus(str){
 	  
 }
 console.log(mayusMinus("HOla"))
+
+// Codigo del curso:
+function enMayuscula(texto) {
+  let resultado = '';
+
+  for (letra in texto) {
+    if (texto[letra - 1] === ' ' || parseInt(letra) === 0) {
+      resultado += texto[letra].toUpperCase();
+    } else {
+      resultado += texto[letra];
+    }
+  }
+  return resultado;
+}
+
+console.log(enMayuscula('hello world perú ...'));
+
+// Otra solución tambien del curso:
+function enMayuscula2(texto){
+  let palabras = [];
+
+  for (let palabra of texto.trim().split(' ')){
+    palabras.push(palabra[0].toUpperCase() + palabra.substring(1));
+  }
+
+  return palabras.join(' ');
+}
+
+console.log(enMayuscula2('   hola mundo   '));
