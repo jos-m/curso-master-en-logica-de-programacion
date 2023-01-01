@@ -17,7 +17,33 @@ function mayusMinus(str){
 	  }else if(mayus<minus){ return str.toLowerCase();}else return str;
 	  
 }
-console.log(mayusMinus("HOla"))
+console.log(mayusMinus("HOla"));
+
+// Si hay mas mayusculas todo a mayusculas sino lo contrario.
+function mayusMinus(texto) {
+  let mayusculas = 0;
+  let minusculas = 0;
+  let resultado = '';
+
+  for (let letra of texto) {
+    if (/[A-Z]/.test(letra)) {
+      mayusculas++;
+    } else {
+      minusculas++;
+    }
+  }
+  console.log(mayusculas, minusculas);
+
+  if (mayusculas > minusculas) {
+    resultado = texto.toUpperCase();
+  } else {
+    resultado = texto.toLowerCase();
+  }
+
+  return resultado;
+}
+
+console.log(mayusMinus('Hola MUNDO'));
 
 // Codigo del curso:
 function enMayuscula(texto) {
