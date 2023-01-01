@@ -14,5 +14,16 @@ function calcularTiempoEnDias(num){
 
 };
 
-console.log(calcularTiempoEnDias(30))
+console.log(calcularTiempoEnDias(30));
 
+// Codigo del curso:
+function calcularDias(dias) {
+  let years = Math.floor(dias / 365);
+  let dias_restantes = (dias % 365);
+  let meses = Math.floor(dias_restantes / 30);
+  dias_restantes = dias_restantes % 30;
+
+  return `Equivale a ${years} años, ${meses} meses y ${dias_restantes} dias.`
+}
+
+console.log(calcularDias(920));
