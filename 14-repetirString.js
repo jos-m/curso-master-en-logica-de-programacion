@@ -1,20 +1,20 @@
-function repetir(texto, repetir){
+function repetir(texto, repetir) {
     return texto.repeat(repetir)
 }
 
-console.log(repetir("hola",5))
+console.log(repetir("hola", 5))
 
-String.prototype.repetir = function(num){
-
+String.prototype.repetir = function (num) {
     let resultado = ""
-    for (let i = 0; i < num; i++){
-
+    for (let i = 0; i < num; i++) {
         resultado += this;
-
     }
-
     return resultado;
-
 }
 
-console.log("chao".repetir(5))
+console.log("chao".repetir(5));
+
+// Otro ejemplo
+Number.prototype.mul = function (numero) {
+    return this * numero;
+}

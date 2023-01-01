@@ -1,12 +1,12 @@
-function numeroDeVocales (str){
-    
+function numeroDeVocales(str) {
+
     let counter = 0;
-    str.replace(/[s+]g/,"")
-       .split("")
-       .filter( (el)=> {
-        if("aeiouáéíóú".includes(el.toLowerCase())) counter++;
-       });
-    
+    str.replace(/[s+]g/, "")
+        .split("")
+        .filter((el) => {
+            if ("aeiouáéíóú".includes(el.toLowerCase())) counter++;
+        });
+
     return counter;
 
 }

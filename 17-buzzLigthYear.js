@@ -37,4 +37,27 @@ function buzzImprimir (num){
     return impresion;
 }
 
-console.log(buzzImprimir(15))
+console.log(buzzImprimir(15));
+
+// Codigo del curso :
+function buzz(numero) {
+    let resultado = '';
+    if (numero % 3 === 0 && numero % 5 === 0) {
+      resultado = "BuzzLightyear";
+    } else if (numero % 3 === 0) {
+      resultado = "buzz";
+    } else if (numero % 5 === 0) {
+      resultado = 'lightyear';
+    } else {
+      return numero;
+    }
+    return resultado;
+  }
+  
+  function imprimir(numero) {  // aqui la funcion no tiene return;
+    for (let i = 1; i <= numero; i++) {
+      console.log(buzz(i)); 
+    }
+  }
+  
+  imprimir(15);
