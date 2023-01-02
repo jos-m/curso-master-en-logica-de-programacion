@@ -31,4 +31,30 @@ console.log(alumnosAprobados([{
 },{
     nombre : "javier",
     nota: 4
-}]))
+}]));
+
+// Codigo del curso
+function suspensos(alumnos) {
+  let aprobados = 0, suspensos = 0;
+
+  for (const alumno of alumnos) {
+    if (alumno[1] >= 5) {
+      aprobados++;
+    } else {
+      suspensos++;
+    }
+  }
+
+  return {
+    'aprobados': aprobados,
+    'suspensos': suspensos
+  }
+}
+
+console.log(suspensos([
+  ['Victor', 10],
+  ['Carlos', 4],
+  ['Freddy', 8],
+  ['Juan', 6],
+  ['Selena', 5]
+]));
