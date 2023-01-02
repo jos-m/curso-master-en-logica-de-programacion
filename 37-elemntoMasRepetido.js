@@ -1,3 +1,4 @@
+// No se entiende. 
 function elementoMasRepetido(param) {
 
     let map = {};
@@ -32,4 +33,37 @@ function elementoMasRepetido(param) {
     }
 
 }
-console.log(elementoMasRepetido([" ", "saaddee,ff"]))
+console.log(elementoMasRepetido([" ", "saaddee,ff"]));
+
+// Codigo del curso:
+function elQueMasAparece(datos) {
+  let mapeo = {}, mas_frecuente = '', mayorValor = 0;
+
+  if (typeof datos === 'string') {
+    datos = datos.split(' ');
+  }
+
+  for (let elemento of datos) {
+    if (mapeo[elemento]) {
+      mapeo[elemento]++;
+    } else {
+      mapeo[elemento] = 1;
+    }
+  }
+
+  for (let elemento in mapeo) {
+    if (mapeo[elemento] > mayorValor) {
+      mayorValor = mapeo[elemento];
+      mas_frecuente = elemento;
+    }
+  }
+
+  // console.log(mayorValor, mas_frecuente);
+  return {
+    'mas_frecuente': mas_frecuente,
+    'mayorValor': mayorValor
+  }
+}
+
+console.log(elQueMasAparece('hola mundo hola hola'));
+console.log(elQueMasAparece([1, 2, 3, 4, 1, 3, 4, 4]));
