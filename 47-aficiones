@@ -1,0 +1,25 @@
+function aficiones(arrObj){
+  let mapeo = {};
+
+  for(objeto of arrObj){
+    for(aficion of objeto.aficiones){
+      if(!mapeo[aficion]){
+        mapeo[aficion] = 1;
+      } else {
+        mapeo[aficion]++;
+      }
+    }
+  }
+
+  return mapeo;
+}
+
+const usuarios = [
+  {nombre: 'Victor', aficiones: ['informatica', 'cine', 'tenis']},
+  {nombre: 'Carlos', aficiones: ['informatica', 'futbol']},
+  {nombre: 'Juan', aficiones: ['movies', 'futbol']},
+  {nombre: 'Andrea', aficiones: ['videojuegos', 'futbol']},
+  {nombre: 'Daniel', aficiones: ['lectura', 'futbol']},
+];
+
+console.log(aficiones(usuarios));
