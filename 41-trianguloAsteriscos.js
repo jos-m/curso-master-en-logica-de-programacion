@@ -1,3 +1,4 @@
+// entendible
 function trinanguloAsteriscos(num) {
     let triangle = ``;
     let espacios = num-1
