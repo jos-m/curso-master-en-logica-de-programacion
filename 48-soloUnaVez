@@ -1,0 +1,24 @@
+function soloUnaVez(texto) {
+  let contadores = {},
+    resultado = [],
+    letras = texto.split('').filter(letra => letra.trim().length >= 1);
+  console.log(letras);
+  for (letra of letras) {
+    if (!contadores[letra]) {
+      contadores[letra] = 1;
+    } else {
+      contadores[letra]++;
+    }
+  }
+  console.log(contadores);
+  // Eliminar las letras que se repiten
+  for (letra in contadores) {
+    console.log(contadores[letra]);
+    if (contadores[letra] === 1) {
+      resultado.push(letra);
+    }
+  }
+  return [ resultado, resultado[0]];
+}
+
+console.log(soloUnaVez('frase frase HOY'));
